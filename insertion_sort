@@ -1,0 +1,47 @@
+1 - Insertion sort steps
+
+ - If it is the first element, it is already sorted.
+ - Pick the next element.
+ - Compare with all the elements in sorted sub-list.
+ - Shift all the the elements in sorted sub-list that is greater than the value to be sorted.
+ - Insert the value.
+ - Repeat until list is sorted.
+
+[22,27,16,2,18,6]
+
+dizi[0] = 22
+dizi[1] = 27
+dizi[2] = 16
+dizi[3] = 2
+dizi[4] = 18
+dizi[5] = 6
+
+first always sorted 
+pick next element
+compare with all elements in sorted sub list
+[22,27,16,2,18,6] => 0. herzaman sirali 1ciyi aldik , birinci ve ikinci sirali, ikinciye gectik, 22,27,16,sirali oluncaya kadar degistir
+[22,16,27,2,18,6]
+[16,22,27,2,18,6] => 3. elementi aldik, alt dizi yani 16,22,27,2 de 3.element sirali olana kadar degistir
+[16,22,2,27,18,6]
+[16,2,22,27,18,6]
+[2,16,22,27,18,6] => 4. elementi aldik alt dizi 2,16,22,27,18, 4. element 18, bu element sirali olana kadar degistir
+[2,16,22,18,27,6]
+[2,16,18,22,27,6] => 5. elementi aldik, alt dizi 2,16,18,22,27,6 5. element 6, bu element sirali olana kadar degistir
+[2,16,18,22,6,27]
+[2,16,18,6,22,27]
+[2,16,6,18,22,27]
+[2,6,16,18,22,27] => dizi siralandi    
+
+2- O(n^2)
+
+3- O ( n 2 ) O(n^2) O(n2) time complexity for Average case 
+
+4 - Dizi siralandikran sonra 18 average case kapsamina girer cunku ortada
+
+
+[7,3,5,8,2,9,4,15,6] 0. herzaman sirali birinciyi al,
+[3,7,5,8,2,9,4,15,6] birinci 3, alt dizi 7,3,, sirali oluncaya kadar degistir
+[3,7,5,8,2,9,4,15,6] ikinciyi al, ikinci 5, alt dizi 3,7,5, ikinci element sirali olana kadar degistir
+[3,5,7,8,2,9,4,15,6] ucuncuyu al, ucuncu 8, alt dizi 3,5,7,8 , ucuncu element sirali, bir sonrakine geç
+[3,5,7,8,2,9,4,15,6] dorduncuyu al, dorduncu 2, alt dizi 3,5,7,8,2 , dorduncu element sirali olana kadar degistir
+[2,3,5,7,8,9,4,15,6]
